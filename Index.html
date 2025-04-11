@@ -54,6 +54,65 @@
   <footer>
     <p>&copy; 2025 Elite Events & Catering. All rights reserved.</p>
   </footer>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+header {
+  background-color: #ff6f61;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+section {
+  padding: 2rem;
+}
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 1rem;
+}
+ 
+// Show a welcome popup after 2 seconds
+setTimeout(() => {
+  alert("Welcome to Event Bliss! Let's make your event unforgettable.");
+}, 2000);
+
+// Simple log for dev console
+console.log("Event Bliss website loaded successfully!");
+
+// Scroll-to-top button (if you want to add one later)
+const scrollBtn = document.createElement('button');
+scrollBtn.textContent = "↑";
+scrollBtn.style.position = "fixed";
+scrollBtn.style.bottom = "20px";
+scrollBtn.style.right = "20px";
+scrollBtn.style.padding = "10px";
+scrollBtn.style.borderRadius = "50%";
+scrollBtn.style.background = "#ff6f61";
+scrollBtn.style.color = "white";
+scrollBtn.style.border = "none";
+scrollBtn.style.display = "none";
+scrollBtn.style.cursor = "pointer";
+document.body.appendChild(scrollBtn);
+
+// Show button on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+// Scroll to top on click
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 </body>
 </html>
 
